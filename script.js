@@ -10,10 +10,10 @@ function writePassword() {
 
 }
 
-var specChar "!#$%&'()*+,-./:; <=>?@[\]^_`{|}~".split("");
-var lcLetters "abcdefghijklmnopqrstuvwxyz".split("");
-var ucLetters "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var numbers "0123456789".split("");
+var specChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("");
+var lcLetters = "abcdefghijklmnopqrstuvwxyz".split("");
+var ucLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var numbers = "0123456789".split("");
 
 
 
@@ -23,25 +23,25 @@ var passUpper = confirm("Should the password have upper case letters?");
 var passNum = confirm("Should the password contain numbers?");
 var passSpecChar = confirm("Should the password contain special characters?");
 
-for (i = 0; i < passLength; i++){
+// for (i = 0; i < passLength; i++){
   
-}
+// }
 
-if (passLower === true) {
+// if (passLower === true) {
 
-}
+// }
 
-if (passUpper === true) {
+// if (passUpper === true) {
 
-}
+// }
 
-if (passNum === true) {
+// if (passNum === true) {
 
-}
+// }
 
-if (passSpecChar === true) {
+// if (passSpecChar === true) {
 
-}
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
