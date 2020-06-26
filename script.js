@@ -51,12 +51,12 @@ if (passSpecChar === true) {
 console.log(possible);
 
 for (i = 0; i < passLength; i++){
-  var min = 0;
-  var max = passLength;
-  getRandomNumberInclusive(min, max);
-  console.log(getRandomNumberInclusive(min, max)); //currently generating random numbers to console log
-  
-  
+  // var min = 0;
+  // var max = passLength;
+  // getRandomNumberInclusive(min, max);
+  // console.log(getRandomNumberInclusive(min, max)); //currently generating random numbers to console log
+  var passChar = [Math.floor(Math.random() * possible.length)];
+  console.log(passChar);
 }
 
 
