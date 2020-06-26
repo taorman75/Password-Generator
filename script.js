@@ -41,7 +41,6 @@ if (passUpper === true) {
 
 if (passNum === true) {
   possible = possible.concat(numbers);
-
 }
 
 if (passSpecChar === true) {
@@ -57,6 +56,9 @@ for (i = 0; i < passLength; i++){
   // console.log(getRandomNumberInclusive(min, max)); //currently generating random numbers to console log
   var passChar = [Math.floor(Math.random() * possible.length)];
   console.log(passChar);
+  // var pwTest = '';
+  // pwTest 
+  // console.log(pwtest);
 }
 
 
