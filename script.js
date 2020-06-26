@@ -10,6 +10,14 @@ function writePassword() {
 
 }
 
+function getRandomNumberInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
 var specChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("");
 var lcLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 var ucLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -43,7 +51,11 @@ if (passSpecChar === true) {
 console.log(possible);
 
 for (i = 0; i < passLength; i++){
-  console.log('1');
+  var min = 0;
+  var max = passLength;
+  getRandomNumberInclusive(min, max);
+  console.log(getRandomNumberInclusive(min, max)); //currently generating random numbers to console log
+  
   
 }
 
