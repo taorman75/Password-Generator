@@ -1,5 +1,5 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate"); 
 
 // Write password to the #password input
 function writePassword() {
@@ -16,7 +16,7 @@ function getRandomNumberInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+// why are prompts showing first/button does not appear?
 
 var specChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("");
 var lcLetters = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -26,6 +26,11 @@ var numbers = "0123456789".split("");
 var possible = [];
 
 var passLength = prompt("Enter the number of characters for the password (8-128).");
+
+  if (passLength >= 8 && passLength <= 128) {
+    
+  
+
 var passLower = confirm("Should the password have lower case letters?");
 var passUpper = confirm("Should the password have upper case letters?");
 var passNum = confirm("Should the password contain numbers?");
@@ -53,9 +58,15 @@ for (i = 0; i < passLength; i++){
   //currently generating random index numbers to console log
   var passChar = possible[Math.floor(Math.random() * possible.length)];
   console.log(passChar);
-  // var pwTest = '';
-  // pwTest 
-  // console.log(pwtest);
+  
+}}
+
+else if (passLength < 8) {
+  alert("I cannot generate a password with that few characters.")
+}
+
+else {
+  alert ("I cannot generate a password with that many characters.")
 }
 
 
