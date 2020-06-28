@@ -1,18 +1,17 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function printPassword(password) { // ARRRRRGH! NOT WORKING!
-  
-  document.getElementById("#password").innerHTML = (password);
+
+function printPassword(password) { 
+  console.log("password generated:", password)
+  document.getElementById("password").value = password;
 }
 
-function getRandomNumberInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
+// function getRandomNumberInclusive(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -21,15 +20,12 @@ var specChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("");
 var lcLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 var ucLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var numbers = "0123456789".split("");
-
 var possible = [];
 
 function writePassword() {
   var passLength = prompt("Enter the number of characters for the password (8-128).");
 
   if (passLength >= 8 && passLength <= 128) {
-
-
 
     var passLower = confirm("Should the password have lower case letters?");
     var passUpper = confirm("Should the password have upper case letters?");
@@ -66,8 +62,8 @@ function writePassword() {
 
     }
     console.log("password: ",password);
-    printPassword();
-   return;
+    printPassword(password);
+  // return;
   }
 
   else if (passLength < 8) {
