@@ -2,12 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+function printPassword(password) { // ARRRRRGH! NOT WORKING!
+  
+  document.getElementById("#password").innerHTML = (password);
 }
 
 function getRandomNumberInclusive(min, max) {
@@ -69,6 +66,8 @@ function writePassword() {
 
     }
     console.log("password: ",password);
+    printPassword();
+   return;
   }
 
   else if (passLength < 8) {
