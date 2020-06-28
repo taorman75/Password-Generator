@@ -16,7 +16,7 @@ function getRandomNumberInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// why are prompts showing first/button does not appear?
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -63,10 +63,11 @@ if (passLower === false && passUpper === false && passNum === false && passSpecC
 console.log(possible);
 
 for (i = 0; i < passLength; i++){
-  //currently generating random index numbers to console log
   var passChar = possible[Math.floor(Math.random() * possible.length)];
   console.log(passChar);
-  // var pwTest = "";
+  var password = "";
+  password = password.concat(passChar + passChar);
+  console.log(password);
 }}
 
 else if (passLength < 8) {
