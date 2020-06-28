@@ -17,6 +17,8 @@ function getRandomNumberInclusive(min, max) {
 }
 
 // why are prompts showing first/button does not appear?
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 var specChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("");
 var lcLetters = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -25,6 +27,7 @@ var numbers = "0123456789".split("");
 
 var possible = [];
 
+function writePassword (){
 var passLength = prompt("Enter the number of characters for the password (8-128).");
 
   if (passLength >= 8 && passLength <= 128) {
@@ -52,13 +55,18 @@ if (passSpecChar === true) {
   possible = possible.concat(specChar);
 }
 
+if (passLower === false && passUpper === false && passNum === false && passSpecChar === false) {
+  alert("Your password cannot have no characters! You must confirm at least one type.");
+  return;
+}
+
 console.log(possible);
 
 for (i = 0; i < passLength; i++){
   //currently generating random index numbers to console log
   var passChar = possible[Math.floor(Math.random() * possible.length)];
   console.log(passChar);
-  
+  // var pwTest = "";
 }}
 
 else if (passLength < 8) {
@@ -68,8 +76,7 @@ else if (passLength < 8) {
 else {
   alert ("I cannot generate a password with that many characters.")
 }
+}
 
 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
