@@ -7,4 +7,4 @@ They can choose upper case letters, lower case letters, numbers, and/or special 
 
 Once they go through all the prompts, the user's randomly-generated password prints to the password area on the page.
 
-Author: Tana Orman (JavaScript)
+*Author: Tana Orman (JavaScript)*
