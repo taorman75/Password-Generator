@@ -1,5 +1,5 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate"); 
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -27,56 +27,57 @@ var numbers = "0123456789".split("");
 
 var possible = [];
 
-function writePassword (){
-var passLength = prompt("Enter the number of characters for the password (8-128).");
+function writePassword() {
+  var passLength = prompt("Enter the number of characters for the password (8-128).");
 
   if (passLength >= 8 && passLength <= 128) {
-    
-  
 
-var passLower = confirm("Should the password have lower case letters?");
-var passUpper = confirm("Should the password have upper case letters?");
-var passNum = confirm("Should the password contain numbers?");
-var passSpecChar = confirm("Should the password contain special characters?");
 
-if (passLower === true) {
-  possible = possible.concat(lcLetters);
-}
 
-if (passUpper === true) {
-  possible =  possible.concat(ucLetters);
-}
+    var passLower = confirm("Should the password have lower case letters?");
+    var passUpper = confirm("Should the password have upper case letters?");
+    var passNum = confirm("Should the password contain numbers?");
+    var passSpecChar = confirm("Should the password contain special characters?");
 
-if (passNum === true) {
-  possible = possible.concat(numbers);
-}
+    if (passLower === true) {
+      possible = possible.concat(lcLetters);
+    }
 
-if (passSpecChar === true) {
-  possible = possible.concat(specChar);
-}
+    if (passUpper === true) {
+      possible = possible.concat(ucLetters);
+    }
 
-if (passLower === false && passUpper === false && passNum === false && passSpecChar === false) {
-  alert("Your password cannot have no characters! You must confirm at least one type.");
-  return;
-}
+    if (passNum === true) {
+      possible = possible.concat(numbers);
+    }
 
-console.log(possible);
+    if (passSpecChar === true) {
+      possible = possible.concat(specChar);
+    }
 
-for (i = 0; i < passLength; i++){
-  var passChar = possible[Math.floor(Math.random() * possible.length)];
-  console.log(passChar);
-  var password = "";
-  password = password.concat(passChar + passChar);
-  console.log(password);
-}}
+    if (passLower === false && passUpper === false && passNum === false && passSpecChar === false) {
+      alert("Your password cannot have no characters! You must confirm at least one type.");
+      return;
+    }
 
-else if (passLength < 8) {
-  alert("I cannot generate a password with that few characters.")
-}
+    console.log(possible);
+    var password = "";
+    for (i = 0; i < passLength; i++) {
+      var passChar = possible[Math.floor(Math.random() * possible.length)];
+      console.log(passChar);
+      password = password.concat(passChar);
 
-else {
-  alert ("I cannot generate a password with that many characters.")
-}
+    }
+    console.log("password: ",password);
+  }
+
+  else if (passLength < 8) {
+    alert("I cannot generate a password with that few characters.")
+  }
+
+  else {
+    alert("I cannot generate a password with that many characters.")
+  }
 }
 
 
