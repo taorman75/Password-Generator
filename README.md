@@ -7,7 +7,7 @@ They can choose upper case letters, lower case letters, numbers, and/or special 
 
 Once they go through all the prompts, the user's randomly-generated password prints to the password area on the page.
 
-![portfolio page screen shot](https://github.com/taorman75/Responsive-Bootstrap-Based-Site/blob/master/passwordgen.jpg)
+![password generator screen shot](https://github.com/taorman75/Password-Generator/blob/master/passwordgen.jpg)
 
 ## Author
 *Tana Orman (JavaScript)*
