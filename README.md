@@ -1,4 +1,4 @@
-# Password-Generator
+# Password-Generator (https://taorman75.github.io/Password-Generator/)
 This simple Javascript-based password generator will generate a password when the user clicks on the "generate password" button.
 
 The password will have the number of characters selected by the user (between 8 and 128 inclusive); if the user picks a number outside of those parameters, they will get an error message. 
